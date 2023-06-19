@@ -4,7 +4,7 @@ WORKDIR /usr/local/app
 
 COPY ./ /usr/local/app/
 
-RUN npm install
+RUN npm install --force
 
 RUN npm run build
 
