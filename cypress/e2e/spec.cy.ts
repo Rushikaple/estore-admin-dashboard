@@ -1,6 +1,6 @@
 describe('Test Admin DashBoard', ()=>{
   beforeEach(()=>{
-    cy.visit('/')
+    cy.visit('http://localhost:9090/')
   })
 
   it('Visits the initial project page', ()=>{
@@ -15,7 +15,7 @@ describe('Test Admin DashBoard', ()=>{
   it('should login with email and password', function(){
     cy.get('input[formControlName=email]').type("admin@example.com")
     cy.get('input[formControlName=password]').type("admin123")
-    cy.get('#loginBtn').click()
+    cy.get('.btn').click()
     cy.get('.navbar-nav li').should('have. length', 6)
   });
   
